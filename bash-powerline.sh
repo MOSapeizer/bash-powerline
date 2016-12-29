@@ -10,6 +10,8 @@ __powerline() {
     readonly GIT_BRANCH_CHANGED_SYMBOL='+'
     readonly GIT_NEED_PUSH_SYMBOL='⇡'
     readonly GIT_NEED_PULL_SYMBOL='⇣'
+    readonly EMOJI_GRINNING="\$(echo -e \"\xF0\x9F\x98\x81\")"
+    readonly EMOJI_POUTING="\$(echo -e \"\xF0\x9F\x98\xA1\")"
 
     # Solarized colorscheme
     readonly FG_BASE03="\[$(tput setaf 8)\]"
@@ -74,9 +76,9 @@ __powerline() {
         [ -n "$branch" ] || return  # git branch not found
 
         local marks
-
+	local unstaged_count="$($git_eng status --porcelain | wc -l | xargs)"
         # branch is modified?
-        [ -n "$($git_eng status --porcelain)" ] && marks+=" $GIT_BRANCH_CHANGED_SYMBOL"
+        [ -n "$($git_eng status --porcelain)" ] && marks+=" $BG_BASE2$FG_RED $GIT_BRANCH_CHANGED_SYMBOL $unstaged_count "
 
         # how many commits local branch is ahead/behind of remote?
         local stat="$($git_eng status --porcelain --branch | grep '^##' | grep -o '\[.\+\]$')"
@@ -94,13 +96,16 @@ __powerline() {
         # colors in the prompt accordingly. 
         if [ $? -eq 0 ]; then
             local BG_EXIT="$BG_GREEN"
+	    local EMOJI_EXIT="$BG_EXIT $EMOJI_GRINNING  $RESET "
         else
             local BG_EXIT="$BG_RED"
+	    local EMOJI_EXIT="$BG_EXIT $EMOJI_POUTING  $RESET "
         fi
 
-        PS1="$BG_BASE1$FG_BASE3 \w $RESET"
+        PS1="$BG_BASE1$FG_VIOLET \W $RESET"
         PS1+="$BG_BLUE$FG_BASE3$(__git_info)$RESET"
-        PS1+="$BG_EXIT$FG_BASE3 $PS_SYMBOL $RESET "
+        #PS1+="$BG_EXIT$FG_BASE3 $PS_SYMBOL $RESET "
+	PS1+="$EMOJI_EXIT"
     }
 
     PROMPT_COMMAND=ps1
