@@ -10,8 +10,65 @@ __powerline() {
     readonly GIT_BRANCH_CHANGED_SYMBOL='+'
     readonly GIT_NEED_PUSH_SYMBOL='⇡'
     readonly GIT_NEED_PULL_SYMBOL='⇣'
+
+    # Emoji symbols
     readonly EMOJI_GRINNING="\$(echo -e \"\xF0\x9F\x98\x81\")"
+    readonly EMOJI_TEARS="\$(echo -e \"\xF0\x9F\x98\x82\")"
+    readonly EMOJI_SMILING_WITH_OPEN_MOUTH="\$(echo -e \"\xF0\x9F\x98\x83\")"
+    readonly EMOJI_SMILING_WITH_OPEN_MOUTH_AND_SMIL="\$(echo -e \"\xF0\x9F\x98\x84\")"
+    readonly EMOJI_SMILING_WITH_OPEN_MOUTH_AND_COLD_SWEAT="\$(echo -e readonly \"\xF0\x9F\x98\x85\")"
+    readonly EMOJI_SMILING_WITH_OPEN_MOUTH_AND_CLOSED_EYES="\$(echo -e readonly \"\xF0\x9F\x98\x86\")"
+    readonly EMOJI_WINKING="\$(echo -e \"\xF0\x9F\x98\x89\")"
+    readonly EMOJI_SMILING_WITH_SMILING_EYES="\$(echo -e \"\xF0\x9F\x98\x8A\")"
+    readonly EMOJI_SAVOURING_DELICIOUS_FOOD="\$(echo -e \"\xF0\x9F\x98\x8B\")"
+    readonly EMOJI_RELIEVED="\$(echo -e \"\xF0\x9F\x98\x8C\")"
+    readonly EMOJI_SMILING_WITH_HEART_SHAPED_EYES="\$(echo -e \"\xF0\x9F\x98\x8D\")"
+    readonly EMOJI_SMIRKING="\$(echo -e \"\xF0\x9F\x98\x8F\")"
+    readonly EMOJI_UNAMUSED="\$(echo -e \"\xF0\x9F\x98\x92\")"
+    readonly EMOJI_WITH_COLD_SWEAT="\$(echo -e \"\xF0\x9F\x98\x93\")"
+    readonly EMOJI_PENSIVE="\$(echo -e \"\xF0\x9F\x98\x94\")"
+    readonly EMOJI_CONFOUNDED="\$(echo -e \"\xF0\x9F\x98\x96\")"
+    readonly EMOJI_THROWING_A_KISS="\$(echo -e \"\xF0\x9F\x98\x98\")"
+    readonly EMOJI_KISSING_WITH_CLOSED_EYES="\$(echo -e \"\xF0\x9F\x98\x9A\")"
+    readonly EMOJI_WITH_STUCK_OUT_TONGUE_AND_WINKING_EYE="\$(echo -e \"\xF0\x9F\x98\x9C\")"
+    readonly EMOJI_WITH_STUCK_OUT_TONGUE_AND_CLOSED_EYES="\$(echo -e \"\xF0\x9F\x98\x9D\")"
+    readonly EMOJI_DISAPPOINTED="\$(echo -e \"\xF0\x9F\x98\x9E\")"
+    readonly EMOJI_ANGRY="\$(echo -e \"\xF0\x9F\x98\xA0\")"
     readonly EMOJI_POUTING="\$(echo -e \"\xF0\x9F\x98\xA1\")"
+    readonly EMOJI_CRYING="\$(echo -e \"\xF0\x9F\x98\xA2\")"
+    readonly EMOJI_PERSEVERING="\$(echo -e \"\xF0\x9F\x98\xA3\")"
+    readonly EMOJI_WITH_LOOK_OF_TRIUMPH="\$(echo -e \"\xF0\x9F\x98\xA4\")"
+    readonly EMOJI_DISAPPOINTED_BUT_RELIEVED="\$(echo -e \"\xF0\x9F\x98\xA5\")"
+    readonly EMOJI_FEARFUL="\$(echo -e \"\xF0\x9F\x98\xA8\")"
+    readonly EMOJI_WEARY="\$(echo -e \"\xF0\x9F\x98\xA9\")"
+    readonly EMOJI_SLEEPY="\$(echo -e \"\xF0\x9F\x98\xAA\")"
+    readonly EMOJI_TIRED="\$(echo -e \"\xF0\x9F\x98\xAB\")"
+    readonly EMOJI_LOUDLY_CRYING="\$(echo -e \"\xF0\x9F\x98\xAD\")"
+    readonly EMOJI_WITH_OPEN_MOUTH_AND_COLD_SWEAT="\$(echo -e \"\xF0\x9F\x98\xB0\")"
+    readonly EMOJI_SCREAMING_IN_FEAR="\$(echo -e \"\xF0\x9F\x98\xB1\")"
+    readonly EMOJI_ASTONISHED="\$(echo -e \"\xF0\x9F\x98\xB2\")"
+    readonly EMOJI_FLUSHED="\$(echo -e \"\xF0\x9F\x98\xB3\")"
+    readonly EMOJI_DIZZY="\$(echo -e \"\xF0\x9F\x98\xB5\")"
+    readonly EMOJI_WITH_MEDICAL_MASK="\$(echo -e \"\xF0\x9F\x98\xB7\")"
+    readonly EMOJI_GRINNING_CAT_WITH_SMILING_EYES="\$(echo -e \"\xF0\x9F\x98\xB8\")"
+    readonly EMOJI_CAT_WITH_TEARS_OF_JOY="\$(echo -e \"\xF0\x9F\x98\xB9\")"
+    readonly EMOJI_SMILING_CAT_WITH_OPEN_MOUTH="\$(echo -e \"\xF0\x9F\x98\xBA\")"
+    readonly EMOJI_SMILING_CAT_WITH_HEART_SHAPED_EYES="\$(echo -e \"\xF0\x9F\x98\xBB\")"
+    readonly EMOJI_CAT_WITH_WRY_SMILE="\$(echo -e \"\xF0\x9F\x98\xBC\")"
+    readonly EMOJI_KISSING_CAT_WITH_CLOSED_EYES="\$(echo -e \"\xF0\x9F\x98\xBD\")"
+    readonly EMOJI_POUTING_CAT="\$(echo -e \"\xF0\x9F\x98\xBE\")"
+    readonly EMOJI_CRYING_CAT="\$(echo -e \"\xF0\x9F\x98\xBF\")"
+    readonly EMOJI_WEARY_CAT="\$(echo -e \"\xF0\x9F\x99\x80\")"
+    readonly EMOJI_WITH_NO_GOOD_GESTURE="\$(echo -e \"\xF0\x9F\x99\x85\")"
+    readonly EMOJI_WITH_OK_GESTURE="\$(echo -e \"\xF0\x9F\x99\x86\")"
+    readonly EMOJI_PERSON_BOWING_DEEPLY="\$(echo -e \"\xF0\x9F\x99\x87\")"
+    readonly EMOJI_SEE_NO_EVIL_MONKEY="\$(echo -e \"\xF0\x9F\x99\x88\")"
+    readonly EMOJI_HEAR_NO_EVIL_MONKEY="\$(echo -e \"\xF0\x9F\x99\x89\")"
+    readonly EMOJI_SPEAK_NO_EVIL_MONKEY="\$(echo -e \"\xF0\x9F\x99\x8A\")"
+    readonly EMOJI_HAPPY_PERSON_RAISING_ONE_HAND="\$(echo -e \"\xF0\x9F\x99\x8B\")"
+    readonly EMOJI_PERSON_RAISING_BOTH_HANDS_IN_CELEBRATION="\$(echo -e readonly \"\xF0\x9F\x99\x8C\")"
+    readonly EMOJI_PERSON_FROWNING="\$(echo -e \"\xF0\x9F\x99\x8D\")"
+    readonly EMOJI_PERSON_WITH_FOL_="\$(echo -e \"\xF0\x9F\x99\x8F\")"
 
     # Solarized colorscheme
     readonly FG_BASE03="\[$(tput setaf 8)\]"
@@ -76,7 +133,7 @@ __powerline() {
         [ -n "$branch" ] || return  # git branch not found
 
         local marks
-	local unstaged_count="$($git_eng status --porcelain | wc -l | xargs)"
+    local unstaged_count="$($git_eng status --porcelain | wc -l | xargs)"
         # branch is modified?
         [ -n "$($git_eng status --porcelain)" ] && marks+=" $BG_BASE2$FG_RED $GIT_BRANCH_CHANGED_SYMBOL $unstaged_count "
 
@@ -96,16 +153,16 @@ __powerline() {
         # colors in the prompt accordingly. 
         if [ $? -eq 0 ]; then
             local BG_EXIT="$BG_GREEN"
-	    local EMOJI_EXIT="$BG_EXIT $EMOJI_GRINNING  $RESET "
+        local EMOJI_EXIT="$BG_EXIT $EMOJI_GRINNING  $RESET "
         else
             local BG_EXIT="$BG_RED"
-	    local EMOJI_EXIT="$BG_EXIT $EMOJI_POUTING  $RESET "
+        local EMOJI_EXIT="$BG_EXIT $EMOJI_POUTING  $RESET "
         fi
 
         PS1="$BG_BASE1$FG_VIOLET \W $RESET"
         PS1+="$BG_BLUE$FG_BASE3$(__git_info)$RESET"
         #PS1+="$BG_EXIT$FG_BASE3 $PS_SYMBOL $RESET "
-	PS1+="$EMOJI_EXIT"
+        PS1+="$EMOJI_EXIT"
     }
 
     PROMPT_COMMAND=ps1
